@@ -1,0 +1,8 @@
+2015-04-22 22:18:34	jabber_oauth	Open this URL in your browser to authenticate: https://www.facebook.com/dialog/oauth?scope=offline_access,xmpp_login&response_type=code&redirect_uri=http://www.bitlbee.org/main.php/Facebook/oauth2.html&client_id=126828914005625
+2015-04-22 22:18:34	jabber_oauth	Respond to this message with the returned authorization token.
+2015-04-22 22:21:01		[url] Shortener service set to: http://tinyurl.com/api-create.php?url=%s
+2015-04-22 22:21:53	jabber_oauth	Open this URL in your browser to authenticate: https://www.facebook.com/dialog/oauth?scope=offline_access,xmpp_login&response_type=code&redirect_uri=http://www.bitlbee.org/main.php/Facebook/oauth2.html&client_id=126828914005625
+2015-04-22 22:21:53	[url]:	http://tinyurl.com/88pyh6h
+2015-04-22 22:21:53	jabber_oauth	Respond to this message with the returned authorization token.
+2015-04-22 22:22:25	tleilaxu	AQCDIUriP1XAk7oUDtQc1cBSIsFhQZnDU7dkXB1N8JQWih7HbEAqScVQN9stP-xOEgr19thGGMPj6srwtSeprvCYjxaD4L2wemmBk8avik0yLLo8uulVMbwPeTjgGtDZ1oByaz9dfP_MPo7jQ0try-AdKpvg_lrYjkQkSs15o_PWJ_OV79VuTaEs6MsyYmbFrezSh5NC6XgTb12-F8gooc-rZahhHaNPo7SsxRRghhFkGmS1oBt2PxPye4i4j4CWA-D53Q8JwXQ-9gIua0uLEDJS-Ipl1samMPkphFR61LIshgprFXgyyafb0ZqBPsR69MV_R8dpXkc_s0RGg_JV1X0W
+2015-04-22 22:22:25	--	[jabber_oauth] is away: Offline

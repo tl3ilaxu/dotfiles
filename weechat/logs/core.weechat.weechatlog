@@ -1,0 +1,282 @@
+2015-04-20 13:01:37		Plugins loaded: alias, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-20 13:04:35	=!=	You can not write text in this buffer
+2015-04-20 13:04:40	=!=	You can not write text in this buffer
+2015-04-21 15:53:04		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-21 15:53:15		Plugins loaded:
+2015-04-21 15:53:15		  irc: IRC (Internet Relay Chat) protocol
+2015-04-21 15:53:15		  perl: Support of perl scripts
+2015-04-21 15:53:15		  guile: Support of scheme scripts (with Guile)
+2015-04-21 15:53:15		  xfer: DCC file transfer and direct chat
+2015-04-21 15:53:15		  script: Scripts manager
+2015-04-21 15:53:15		  ruby: Support of ruby scripts
+2015-04-21 15:53:15		  fifo: FIFO pipe for remote control
+2015-04-21 15:53:15		  aspell: Spell checker for input (with Aspell)
+2015-04-21 15:53:15		  alias: Alias commands
+2015-04-21 15:53:15		  logger: Log buffers to files
+2015-04-21 15:53:15		  exec: Execution of external commands in WeeChat
+2015-04-21 15:53:15		  lua: Support of lua scripts
+2015-04-21 15:53:15		  trigger: Text replacement and command execution on events triggered by WeeChat/plugins
+2015-04-21 15:53:15		  python: Support of python scripts
+2015-04-21 15:53:15		  charset: Charset conversions
+2015-04-21 15:53:15		  relay: Relay WeeChat data to remote application (irc/weechat protocols)
+2015-04-22 21:22:49		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 21:29:44		irc: server zeusSlack created
+2015-04-22 21:31:30		Options saved to sec.conf
+2015-04-22 21:31:30		Options saved to weechat.conf
+2015-04-22 21:31:30		Options saved to plugins.conf
+2015-04-22 21:31:30		Options saved to irc.conf
+2015-04-22 21:31:30		Options saved to xfer.conf
+2015-04-22 21:31:30		Options saved to script.conf
+2015-04-22 21:31:30		Options saved to aspell.conf
+2015-04-22 21:31:30		Options saved to alias.conf
+2015-04-22 21:31:30		Options saved to logger.conf
+2015-04-22 21:31:30		Options saved to exec.conf
+2015-04-22 21:31:30		Options saved to trigger.conf
+2015-04-22 21:31:30		Options saved to charset.conf
+2015-04-22 21:31:30		Options saved to relay.conf
+2015-04-22 21:32:09		Option changed: weechat.look.highlight = "kenneth,tleilaxu,tlel,tlilo,lel"  (default: "")
+2015-04-22 21:33:34		Filter "hidevoices" added:
+2015-04-22 21:33:34		  [hidevoices] buffer: irc.NAME.* / tags: irc_mode / regex: (\+|\-)v 
+2015-04-22 21:33:48		Option changed: weechat.color.chat_nick_colors = "red,green,brown,blue,magenta,cyan,white,lightred,lightgreen,yellow,lightblue,lightmagenta,lightcyan"  (default: "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue")
+2015-04-22 21:34:02		Options saved to sec.conf
+2015-04-22 21:34:02		Options saved to weechat.conf
+2015-04-22 21:34:02		Options saved to plugins.conf
+2015-04-22 21:34:02		Options saved to irc.conf
+2015-04-22 21:34:02		Options saved to xfer.conf
+2015-04-22 21:34:02		Options saved to script.conf
+2015-04-22 21:34:02		Options saved to aspell.conf
+2015-04-22 21:34:02		Options saved to alias.conf
+2015-04-22 21:34:02		Options saved to logger.conf
+2015-04-22 21:34:02		Options saved to exec.conf
+2015-04-22 21:34:02		Options saved to trigger.conf
+2015-04-22 21:34:02		Options saved to charset.conf
+2015-04-22 21:34:02		Options saved to relay.conf
+2015-04-22 21:34:47		script: downloading list of scripts...
+2015-04-22 21:34:47		script: 292 scripts for WeeChat 1.1.1
+2015-04-22 21:34:48		perl: loading script "/home/tleilaxu/.weechat/perl/buffers.pl"
+2015-04-22 21:34:48		perl: registered script "buffers", version 5.0 (Sidebar with list of buffers)
+2015-04-22 21:34:48		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2015-04-22 21:34:48		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2015-04-22 21:34:48		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2015-04-22 21:34:48		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2015-04-22 21:35:16		Option changed: buffers.look.hotlist_counter = on  (default: off)
+2015-04-22 21:36:04		perl: loading script "/home/tleilaxu/.weechat/perl/colorize_lines.pl"
+2015-04-22 21:36:04		perl: registered script "colorize_lines", version 3.3 (colors text in chat area with according nick color, including highlights)
+2015-04-22 21:38:20		script: script "colorize_lines.pl" is already installed and up-to-date
+2015-04-22 21:38:24		Options saved to sec.conf
+2015-04-22 21:38:24		Options saved to weechat.conf
+2015-04-22 21:38:24		Options saved to plugins.conf
+2015-04-22 21:38:24		Options saved to irc.conf
+2015-04-22 21:38:24		Options saved to xfer.conf
+2015-04-22 21:38:24		Options saved to script.conf
+2015-04-22 21:38:24		Options saved to aspell.conf
+2015-04-22 21:38:24		Options saved to alias.conf
+2015-04-22 21:38:24		Options saved to logger.conf
+2015-04-22 21:38:24		Options saved to exec.conf
+2015-04-22 21:38:24		Options saved to trigger.conf
+2015-04-22 21:38:24		Options saved to charset.conf
+2015-04-22 21:38:24		Options saved to relay.conf
+2015-04-22 21:38:24		Options saved to buffers.conf
+2015-04-22 21:38:33		python: loading script "/home/tleilaxu/.weechat/python/go.py"
+2015-04-22 21:38:33		python: registered script "go", version 2.0 (Quick jump to buffers)
+2015-04-22 21:40:14	=!=	Error: it is not safe to bind key "alt-k" because it does not start with a ctrl or meta code (tip: use alt-k to find key codes); if you want to bind this key anyway, turn off option weechat.look.key_bind_safe
+2015-04-22 21:42:36	=!=	Error: it is not safe to bind key "alt-g" because it does not start with a ctrl or meta code (tip: use alt-k to find key codes); if you want to bind this key anyway, turn off option weechat.look.key_bind_safe
+2015-04-22 21:42:53		New key binding (context "default"): ctrl-k => /go
+2015-04-22 21:42:59		Options saved to sec.conf
+2015-04-22 21:42:59		Options saved to weechat.conf
+2015-04-22 21:42:59		Options saved to plugins.conf
+2015-04-22 21:42:59		Options saved to irc.conf
+2015-04-22 21:42:59		Options saved to xfer.conf
+2015-04-22 21:42:59		Options saved to script.conf
+2015-04-22 21:42:59		Options saved to aspell.conf
+2015-04-22 21:42:59		Options saved to alias.conf
+2015-04-22 21:42:59		Options saved to logger.conf
+2015-04-22 21:42:59		Options saved to exec.conf
+2015-04-22 21:42:59		Options saved to trigger.conf
+2015-04-22 21:42:59		Options saved to charset.conf
+2015-04-22 21:42:59		Options saved to relay.conf
+2015-04-22 21:42:59		Options saved to buffers.conf
+2015-04-22 21:43:10		python: scripts unloaded
+2015-04-22 21:43:12		python scripts loaded: go
+2015-04-22 21:43:12		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 21:43:36		Key "ctrl-k" unbound (context: "default")
+2015-04-22 21:43:36		New key binding (context "default"): ctrl-k => /go
+2015-04-22 21:43:52		Key "ctrl-k" unbound (context: "default")
+2015-04-22 21:43:52		New key binding (context "default"): ctrl-k => go
+2015-04-22 21:44:19		New key binding (context "default"): ctrl-g => /go
+2015-04-22 21:44:33		Options saved to sec.conf
+2015-04-22 21:44:33		Options saved to weechat.conf
+2015-04-22 21:44:33		Options saved to plugins.conf
+2015-04-22 21:44:33		Options saved to irc.conf
+2015-04-22 21:44:33		Options saved to buffers.conf
+2015-04-22 21:44:33		Options saved to xfer.conf
+2015-04-22 21:44:33		Options saved to script.conf
+2015-04-22 21:44:33		Options saved to aspell.conf
+2015-04-22 21:44:33		Options saved to alias.conf
+2015-04-22 21:44:33		Options saved to logger.conf
+2015-04-22 21:44:33		Options saved to exec.conf
+2015-04-22 21:44:33		Options saved to trigger.conf
+2015-04-22 21:44:33		Options saved to charset.conf
+2015-04-22 21:44:33		Options saved to relay.conf
+2015-04-22 21:44:35		python: scripts unloaded
+2015-04-22 21:44:36		python scripts loaded: go
+2015-04-22 21:44:36		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 21:45:34		Key "ctrl-g" unbound (context: "default")
+2015-04-22 21:45:45	=!=	Error: it is not safe to bind key "alt-k" because it does not start with a ctrl or meta code (tip: use alt-k to find key codes); if you want to bind this key anyway, turn off option weechat.look.key_bind_safe
+2015-04-22 21:47:00		New key binding (context "default"): ctrl-G => /go
+2015-04-22 21:47:31	=!=	Error: unknown command "/unbind" (type /help for help)
+2015-04-22 21:47:35	=!=	Error: unknown command "/keys" (type /help for help)
+2015-04-22 21:47:41		Key "ctrl-G" unbound (context: "default")
+2015-04-22 21:47:51		Key "ctrl-K" unbound (context: "default")
+2015-04-22 21:47:51		New key binding (context "default"): ctrl-K => /go
+2015-04-22 21:48:26		Options saved to sec.conf
+2015-04-22 21:48:26		Options saved to weechat.conf
+2015-04-22 21:48:26		Options saved to plugins.conf
+2015-04-22 21:48:26		Options saved to irc.conf
+2015-04-22 21:48:26		Options saved to buffers.conf
+2015-04-22 21:48:26		Options saved to xfer.conf
+2015-04-22 21:48:26		Options saved to script.conf
+2015-04-22 21:48:26		Options saved to aspell.conf
+2015-04-22 21:48:26		Options saved to alias.conf
+2015-04-22 21:48:26		Options saved to logger.conf
+2015-04-22 21:48:26		Options saved to exec.conf
+2015-04-22 21:48:26		Options saved to trigger.conf
+2015-04-22 21:48:26		Options saved to charset.conf
+2015-04-22 21:48:26		Options saved to relay.conf
+2015-04-22 21:49:36	=!=	irc: command "servlist" must be executed on irc buffer (server or channel)
+2015-04-22 21:49:41		All servers:
+2015-04-22 21:49:41		   freenode
+2015-04-22 21:49:41		   zeusSlack
+2015-04-22 21:50:03		Option changed: irc.server.zeusSlack.autoconnect = on  (default: (undefined))
+2015-04-22 21:50:06		Options saved to sec.conf
+2015-04-22 21:50:06		Options saved to weechat.conf
+2015-04-22 21:50:06		Options saved to plugins.conf
+2015-04-22 21:50:06		Options saved to irc.conf
+2015-04-22 21:50:06		Options saved to buffers.conf
+2015-04-22 21:50:06		Options saved to xfer.conf
+2015-04-22 21:50:06		Options saved to script.conf
+2015-04-22 21:50:06		Options saved to aspell.conf
+2015-04-22 21:50:06		Options saved to alias.conf
+2015-04-22 21:50:06		Options saved to logger.conf
+2015-04-22 21:50:06		Options saved to exec.conf
+2015-04-22 21:50:06		Options saved to trigger.conf
+2015-04-22 21:50:06		Options saved to charset.conf
+2015-04-22 21:50:06		Options saved to relay.conf
+2015-04-22 21:50:09		python: scripts unloaded
+2015-04-22 21:50:10		python scripts loaded: go
+2015-04-22 21:50:10		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 21:52:22	=!=	Error: filter "hidevoices" already exists
+2015-04-22 21:53:31		python: scripts unloaded
+2015-04-22 21:54:41		python scripts loaded: go
+2015-04-22 21:54:41		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 21:55:14		Scripts loaded:
+2015-04-22 21:55:14		 * ia   buffers.pl 5.0 (Sidebar with list of buffers)
+2015-04-22 21:55:14		   ia   colorize_lines.pl 3.3 (colors text in chat area with according nick color, including highlights)
+2015-04-22 21:55:14		   ia   go.py 2.0 (Quick jump to buffers)
+2015-04-22 21:55:33		ruby: loading script "/home/tleilaxu/.weechat/ruby/slacklog.rb"
+2015-04-22 21:55:34		ruby: registered script "slacklog", version 0.1 (Slack backlog)
+2015-04-22 21:56:00		Option created: plugins.var.ruby.slacklog.servers = "zeusSlack"
+2015-04-22 21:56:40		Option created: plugins.var.ruby.slacklog.zeusSlack.api_token = "xoxp-2484654576-3033040455-4165370121-c74dbb"
+2015-04-22 21:58:25		Option created: plugins.var.ruby.slacklog.count = "1000"
+2015-04-22 21:58:28		Options saved to sec.conf
+2015-04-22 21:58:28		Options saved to weechat.conf
+2015-04-22 21:58:28		Options saved to plugins.conf
+2015-04-22 21:58:28		Options saved to irc.conf
+2015-04-22 21:58:28		Options saved to buffers.conf
+2015-04-22 21:58:28		Options saved to xfer.conf
+2015-04-22 21:58:28		Options saved to script.conf
+2015-04-22 21:58:28		Options saved to aspell.conf
+2015-04-22 21:58:28		Options saved to alias.conf
+2015-04-22 21:58:28		Options saved to logger.conf
+2015-04-22 21:58:28		Options saved to exec.conf
+2015-04-22 21:58:28		Options saved to trigger.conf
+2015-04-22 21:58:28		Options saved to charset.conf
+2015-04-22 21:58:28		Options saved to relay.conf
+2015-04-22 21:58:33		python: scripts unloaded
+2015-04-22 22:00:04		python scripts loaded: go
+2015-04-22 22:00:04		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:00:41		Scripts loaded:
+2015-04-22 22:00:41		 * ia   buffers.pl 5.0 (Sidebar with list of buffers)
+2015-04-22 22:00:41		   ia   colorize_lines.pl 3.3 (colors text in chat area with according nick color, including highlights)
+2015-04-22 22:00:41		   ia   go.py 2.0 (Quick jump to buffers)
+2015-04-22 22:00:41		  ?     slacklog.rb 0.1 (Slack backlog)
+2015-04-22 22:01:16		python: scripts unloaded
+2015-04-22 22:01:36		python scripts loaded: go
+2015-04-22 22:01:36		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:02:21		python: scripts unloaded
+2015-04-22 22:02:48		python scripts loaded: go
+2015-04-22 22:02:48		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:03:01		script: script "colorize_lines.pl" is already installed and up-to-date
+2015-04-22 22:03:27		python: scripts unloaded
+2015-04-22 22:06:59		python scripts loaded: go
+2015-04-22 22:06:59		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:08:20		Option changed: irc.look.smart_filter = on
+2015-04-22 22:09:03		Filter "irc_smart" added:
+2015-04-22 22:09:03		  [irc_smart] buffer: * / tags: irc_smart_filter / regex: * 
+2015-04-22 22:10:02	=!=	Error: option "buffers.name_size_max" not found
+2015-04-22 22:11:02		Options saved to sec.conf
+2015-04-22 22:11:02		Options saved to weechat.conf
+2015-04-22 22:11:02		Options saved to plugins.conf
+2015-04-22 22:11:02		Options saved to irc.conf
+2015-04-22 22:11:02		Options saved to buffers.conf
+2015-04-22 22:11:02		Options saved to xfer.conf
+2015-04-22 22:11:02		Options saved to script.conf
+2015-04-22 22:11:02		Options saved to aspell.conf
+2015-04-22 22:11:03		Options saved to alias.conf
+2015-04-22 22:11:03		Options saved to logger.conf
+2015-04-22 22:11:03		Options saved to exec.conf
+2015-04-22 22:11:03		Options saved to trigger.conf
+2015-04-22 22:11:03		Options saved to charset.conf
+2015-04-22 22:11:03		Options saved to relay.conf
+2015-04-22 22:11:44	=!=	irc: unable to create temporary server "localhost" because the creation of temporary servers with command /connect is currently disabled
+2015-04-22 22:11:44	=!=	irc: if you want to create a standard server, use the command "/server add" (see /help server); if you really want to create a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2015-04-22 22:11:44	=!=	irc: unable to create temporary server "6667" because the creation of temporary servers with command /connect is currently disabled
+2015-04-22 22:11:44	=!=	irc: if you want to create a standard server, use the command "/server add" (see /help server); if you really want to create a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2015-04-22 22:12:06	=!=	irc: unable to create temporary server "localhost" because the creation of temporary servers with command /connect is currently disabled
+2015-04-22 22:12:06	=!=	irc: if you want to create a standard server, use the command "/server add" (see /help server); if you really want to create a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2015-04-22 22:12:37		python: scripts unloaded
+2015-04-22 22:12:40		python scripts loaded: go
+2015-04-22 22:12:40		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:13:12	=!=	irc: unable to create temporary server "localhost" because the creation of temporary servers with command /connect is currently disabled
+2015-04-22 22:13:12	=!=	irc: if you want to create a standard server, use the command "/server add" (see /help server); if you really want to create a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2015-04-22 22:14:14		irc: server fb created
+2015-04-22 22:21:01		ruby: loading script "/home/tleilaxu/.weechat/ruby/url_shorten.rb"
+2015-04-22 22:21:01		ruby: registered script "url_shorten", version 1.9.0 (Shorten url)
+2015-04-22 22:26:13		Options saved to sec.conf
+2015-04-22 22:26:13		Options saved to weechat.conf
+2015-04-22 22:26:13		Options saved to plugins.conf
+2015-04-22 22:26:13		Options saved to irc.conf
+2015-04-22 22:26:13		Options saved to buffers.conf
+2015-04-22 22:26:13		Options saved to xfer.conf
+2015-04-22 22:26:13		Options saved to script.conf
+2015-04-22 22:26:13		Options saved to aspell.conf
+2015-04-22 22:26:13		Options saved to alias.conf
+2015-04-22 22:26:13		Options saved to logger.conf
+2015-04-22 22:26:13		Options saved to exec.conf
+2015-04-22 22:26:13		Options saved to trigger.conf
+2015-04-22 22:26:13		Options saved to charset.conf
+2015-04-22 22:26:13		Options saved to relay.conf
+2015-04-22 22:27:17		Options saved to sec.conf
+2015-04-22 22:27:17		Options saved to weechat.conf
+2015-04-22 22:27:17		Options saved to plugins.conf
+2015-04-22 22:27:17		Options saved to irc.conf
+2015-04-22 22:27:17		Options saved to buffers.conf
+2015-04-22 22:27:17		Options saved to xfer.conf
+2015-04-22 22:27:17		Options saved to script.conf
+2015-04-22 22:27:17		Options saved to aspell.conf
+2015-04-22 22:27:17		Options saved to alias.conf
+2015-04-22 22:27:17		Options saved to logger.conf
+2015-04-22 22:27:17		Options saved to exec.conf
+2015-04-22 22:27:17		Options saved to trigger.conf
+2015-04-22 22:27:17		Options saved to charset.conf
+2015-04-22 22:27:17		Options saved to relay.conf
+2015-04-22 22:27:20		python: scripts unloaded
+2015-04-22 22:27:22		python scripts loaded: go
+2015-04-22 22:27:22		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:28:38		python: scripts unloaded
+2015-04-22 22:28:39		python scripts loaded: go
+2015-04-22 22:28:39		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-22 22:30:54		python: scripts unloaded
+2015-04-23 13:14:41		python scripts loaded: go
+2015-04-23 13:14:41		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-04-23 14:58:36		python: scripts unloaded
