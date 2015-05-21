@@ -28,13 +28,13 @@
 [shortcuts]
 
 [urgency_low]
-    background = "#ffffff"
-    foreground = "#000000"
+    background = "#000000"
+    foreground = "#FFFFFF"
     timeout = 30
 
 [urgency_normal]
-    background = "#94DBFF"
-    foreground = "#000000"
+    background = "#000000"
+    foreground = "#FFFFFF"
     timeout = 45
 
 [urgency_critical]
