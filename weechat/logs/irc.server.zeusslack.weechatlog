@@ -252,3 +252,22 @@
 2015-04-23 14:01:01	--	 Message of the day
 2015-04-23 14:01:01	--	 WELCOME TO SLACK...
 2015-04-23 14:01:01	--	 End of MOTD command
+2015-05-20 22:57:51	--	irc: connecting to server zeuswpi.irc.slack.com/6667 (SSL)...
+2015-05-20 22:57:51	--	gnutls: connected using 512-bit Diffie-Hellman shared secret exchange
+2015-05-20 22:57:51	--	gnutls: receiving 2 certificates
+2015-05-20 22:57:51	--	 - certificate[1] info:
+2015-05-20 22:57:51	--	   - subject `C=US,ST=California,L=San Francisco,O=Tiny Speck,CN=*.irc.slack.com', issuer `C=US,O=GeoTrust Inc.,CN=GeoTrust SSL CA - G3', RSA key 2048 bits, signed using RSA-SHA256, activated `2014-12-03 00:00:00 UTC', expires `2015-12-03 23:59:59 UTC', SHA-1 fingerprint `ddcf57c9212e95add5b4b370e0d1d1d83ac438b2'
+2015-05-20 22:57:51	--	 - certificate[2] info:
+2015-05-20 22:57:51	--	   - subject `C=US,O=GeoTrust Inc.,CN=GeoTrust SSL CA - G3', issuer `C=US,O=GeoTrust Inc.,CN=GeoTrust Global CA', RSA key 2048 bits, signed using RSA-SHA256, activated `2013-11-05 21:36:50 UTC', expires `2022-05-20 21:36:50 UTC', SHA-1 fingerprint `5aeaee3f7f2a9449cebafeec68fdd184f20124a7'
+2015-05-20 22:57:51	--	gnutls: peer's certificate is trusted
+2015-05-20 22:57:51	--	irc: connected to zeuswpi.irc.slack.com/6667 (54.86.231.247)
+2015-05-20 22:57:52	--	CTCP requested by slackbot: VERSION
+2015-05-20 22:57:52	--	CTCP reply to slackbot: VERSION WeeChat 1.2 (May 12 2015)
+2015-05-20 22:57:52	--	irc.tinyspeck.com IRC-SLACK gateway
+2015-05-20 22:57:52	--	Welcome to Slack IRC Gateway server
+2015-05-20 22:57:52	--	MAP SILENCE=15 WHOX WALLCHOPS WALLVOICES USERIP CPRIVMSG CNOTICE MODES=6 MAXCHANNELS=100 SAFELIST :are supported by this server
+2015-05-20 22:57:52	--	NICKLEN=32 TOPICLEN=160 AWAYLEN=160 CHANTYPES=# PREFIX=(ov)@+ CHANMODES=b,k,l,rimnpst CASEMAPPING=rfc1459 :are supported by this server
+2015-05-20 22:57:52	--	there are 60 users
+2015-05-20 22:57:52	--	 Message of the day
+2015-05-20 22:57:52	--	 WELCOME TO SLACK...
+2015-05-20 22:57:52	--	 End of MOTD command

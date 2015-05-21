@@ -280,3 +280,84 @@
 2015-04-23 13:14:41		python scripts loaded: go
 2015-04-23 13:14:41		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
 2015-04-23 14:58:36		python: scripts unloaded
+2015-05-20 22:57:50		fifo: removing old fifo pipe "/home/tleilaxu/.dotfiles/weechat/weechat_fifo_2208"
+2015-05-20 22:57:50		perl scripts loaded: buffers, colorize_lines
+2015-05-20 22:57:51	=!=	ruby: error while loading file "/home/tleilaxu/.dotfiles/weechat/ruby/autoload/slacklog.rb"
+2015-05-20 22:57:51	=!=	ruby: error: eval:31:in `module_eval': uninitialized constant Encoding::UTF_7 (NameError)
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/uri/common.rb:15:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/uri.rb:104:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/uri.rb:104:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/net/http.rb:23:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/net/http.rb:23:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/net/https.rb:21:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/net/https.rb:21:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from (eval):32:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from (eval):32:in `load_eval_file'
+2015-05-20 22:57:51	=!=	ruby: error:      from eval:31:in `module_eval'
+2015-05-20 22:57:51	=!=	ruby: error:      from eval:31:in `load_eval_file'
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri.rb:98: warning: already initialized constant URI::VERSION_CODE
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri.rb:98: warning: previous definition of VERSION_CODE was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri.rb:99: warning: already initialized constant URI::VERSION
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri.rb:99: warning: previous definition of VERSION was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:16: warning: already initialized constant URI::REGEXP
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:16: warning: previous definition of REGEXP was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:17: warning: already initialized constant URI::Parser
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:17: warning: previous definition of Parser was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:18: warning: already initialized constant URI::RFC3986_PARSER
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:18: warning: previous definition of RFC3986_PARSER was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:21: warning: already initialized constant URI::DEFAULT_PARSER
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:21: warning: previous definition of DEFAULT_PARSER was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::ABS_URI
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of ABS_URI was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::REL_URI
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of REL_URI was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::URI_REF
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of URI_REF was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::ABS_URI_REF
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of ABS_URI_REF was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::REL_URI_REF
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of REL_URI_REF was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::ESCAPED
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of ESCAPED was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::UNSAFE
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of UNSAFE was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::SCHEME
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of SCHEME was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::USERINFO
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of USERINFO was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::HOST
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of HOST was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::PORT
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of PORT was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::OPAQUE
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of OPAQUE was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::REGISTRY
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of REGISTRY was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::ABS_PATH
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of ABS_PATH was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::REL_PATH
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of REL_PATH was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::QUERY
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of QUERY was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: already initialized constant URI::FRAGMENT
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:28: warning: previous definition of FRAGMENT was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:332: warning: already initialized constant URI::TBLENCWWWCOMP_
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:332: warning: previous definition of TBLENCWWWCOMP_ was here
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:338: warning: already initialized constant URI::TBLDECWWWCOMP_
+2015-05-20 22:57:51	=!=	ruby: stdout/stderr: /usr/lib/ruby/2.2.0/uri/common.rb:338: warning: previous definition of TBLDECWWWCOMP_ was here
+2015-05-20 22:57:51	=!=	ruby: error while loading file "/home/tleilaxu/.dotfiles/weechat/ruby/autoload/url_shorten.rb"
+2015-05-20 22:57:51	=!=	ruby: error: eval:31:in `module_eval': uninitialized constant Encoding::UTF_7 (NameError)
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/uri/common.rb:15:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/uri.rb:104:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/uri.rb:104:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/net/http.rb:23:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from /usr/lib/ruby/2.2.0/net/http.rb:23:in `<top (required)>'
+2015-05-20 22:57:51	=!=	ruby: error:      from (eval):49:in `require'
+2015-05-20 22:57:51	=!=	ruby: error:      from (eval):49:in `load_eval_file'
+2015-05-20 22:57:51	=!=	ruby: error:      from eval:31:in `module_eval'
+2015-05-20 22:57:51	=!=	ruby: error:      from eval:31:in `load_eval_file'
+2015-05-20 22:57:51		python scripts loaded: go
+2015-05-20 22:57:51		script: downloading list of scripts...
+2015-05-20 22:57:51		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2015-05-20 22:57:51		script: 292 scripts for WeeChat 1.2
+2015-05-20 22:58:50		python: scripts unloaded

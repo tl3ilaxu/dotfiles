@@ -31,7 +31,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-dunst &
+dunst -config /home/tleilaxu/.dunstrc &
 xsetroot -cursor_name left_ptr &
 xloadimage -onroot -fullscreen $HOME/Pictures/wallhaven-113377.jpg
 exec xmonad
