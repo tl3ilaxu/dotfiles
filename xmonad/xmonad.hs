@@ -18,4 +18,5 @@ myConfig = defaultConfig
                    , ("<Print>", spawn "scrot -e 'mv $f ~/Pictures/screenshots'")
                    , ("M-l", spawn "xsecurelock")
                    , ("M-c", spawn "chromium")
+                   , ("M-p", spawn "yeganesh -x | $SHELL")
                    ]
