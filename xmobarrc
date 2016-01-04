@@ -1,56 +1,30 @@
 Config { 
 
     -- appearance
-        font =         "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
-        , bgColor =      "black"
-        , fgColor =      "#646464"
+        font =         "xft:Bitstream Vera Sans Mono:size=12:antialias=true"
+        , bgColor =      "#121212"
+        , fgColor =      "#ffffff"
         , position =     Top
-        , border =       BottomB
         , borderColor =  "#646464"
 
         -- layout
         , sepChar =  "%"   -- delineator between plugin names and straight text
         , alignSep = "}{"  -- separator between left-right alignment
-        , template = "%wifi% | %battery% |%memory%}{ %date% "
+        , template = " <fc=#b3b3b3>%wifi%</fc>}%title%{ <fc=#3333ff>%batt%</fc> <fc=#b3b3b3>%date%</fc> "
 
         -- general behavior
         , lowerOnStart =     True    -- send to bottom of window stack on start
         , hideOnStart =      False   -- start with window unmapped (hidden)
         , allDesktops =      True    -- show on all desktops
         , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
-        , pickBroadest =     False   -- choose widest display (multi-monitor)
+        , pickBroadest =     True    -- choose widest display (multi-monitor)
         , persistent =       True    -- enable/disable hiding (True = disabled)
 
         , commands = 
         -- memory usage monitor
-        [ Run Memory         [ "--template" ,"Mem: <usedratio>%"
-        , "--Low"      , "20"        -- units: %
-        , "--High"     , "90"        -- units: %
-        , "--low"      , "darkgreen"
-        , "--normal"   , "darkorange"
-        , "--high"     , "darkred"
-        ] 10
-
-        -- battery monitor
-        , Run Battery        [ "--template" , "Batt: <acstatus>"
-        , "--Low"      , "10"        -- units: %
-        , "--High"     , "80"        -- units: %
-        , "--low"      , "darkred"
-        , "--normal"   , "darkorange"
-        , "--high"     , "darkgreen"
-
-        , "--" -- battery specific options
-        -- discharging status
-        , "-o"	, "<left>% (<timeleft>)"
-        -- AC "on" status
-        , "-O"	, "<fc=#dAA520>Charging</fc>"
-        -- charged status
-        , "-i"	, "<fc=#006000>Charged</fc>"
-        ] 50
-
-        -- time and date indicator 
-        --   (%F = dd-mm-yyyy date, %a = day of week, %T = h:m:s time)
-        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+        [ Run DateZone      "%d-%m-%Y %a %H:%M:%S" "be_BE.UTF-8" "Europe/Brussels" "date" 10
         , Run Com ".config/xmobar/scripts/wifi" [] "wifi" 10
+        , Run Com "xtitle" ["-t 60"] "title" 10
+        , Run Com ".config/xmobar/scripts/batt" [] "batt" 10
         ]
 }

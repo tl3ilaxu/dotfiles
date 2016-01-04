@@ -1,4 +1,5 @@
 #!/bin/sh
+xsecurelock
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -33,5 +34,9 @@ fi
 
 dunst -config /home/tleilaxu/.dunstrc &
 xsetroot -cursor_name left_ptr &
-xloadimage -onroot -fullscreen $HOME/Pictures/wallhaven-113377.jpg
-exec xmonad
+feh --bg-scale $HOME/Pictures/currentWallpaper.jpg
+xautolock -time 3 -locker xsecurelock | logger &
+setxkbmap -model pc104 -layout us,be,us -variant ,,dvorak -option grp:alt_shift_toggle caps:none compose:caps
+
+sxhkd &
+exec bspwm

@@ -29,8 +29,13 @@ xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 xterm*foreground: rgb:f8/f8/f8
 xterm*background: rgb:00/00/00
 XTerm*faceName: Bitstream Vera Serif Mono
-xterm*faceSize: 11
+xterm*faceSize: 12
 
 ! Using alt as a meta key.
 XTerm*metaSendsEscape: true
 
+xterm*saveLines: 2000
+xterm*eightBitInput: false
+xterm*boldMode: false
+xterm*colorBDMode: true
+xterm*colorBD: rgb:fc/fc/fc
