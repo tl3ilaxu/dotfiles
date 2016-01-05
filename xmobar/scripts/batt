@@ -1,0 +1,12 @@
+#!/bin/sh
+#↑↓
+bar="$(acpi | sed "s/.*\( \(.*\)%\).*/\2/g" | tr -d "\n")"
+if acpi | grep -q "Charging"; then
+    echo -n $bar
+    echo -n "↑"
+elif acpi | grep -q "Discharging"; then
+    echo -n $bar
+    echo -n "↓"
+fi
+
+exit 0
