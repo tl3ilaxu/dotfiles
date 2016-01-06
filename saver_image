@@ -1,1 +1,11 @@
-/usr/local/libexec/xsecurelock/saver_image
+#!/bin/bash
+# Locks the screen with a image and shuts the screen off after 10 seconds
+# Run in background
+(
+  sleep 10
+  # If we are loggin in or logged in don't shut the screen off
+  trap '' TERM
+  xset dpms force off
+) &
+# Show image on the window
+eval 'exec xloadimage -fullscreen -windowid $XSCREENSAVER_WINDOW /home/tleilaxu/.config/screensaver/screensaver.png'
