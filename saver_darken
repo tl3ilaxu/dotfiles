@@ -1,9 +1,11 @@
-# Locks the screen with an image that is darkend by 30% shuts the sceen off after 10 seconds
+#!/bin/bash
+# Locks the screen with a image that is darkend by 30% and shuts the screen off after 10 seconds
+# Run in background
 (
   sleep 10
-# Don't turn screen off if we are not locked
+  # If we are loggin in or logged in don't shut the screen off
   trap '' TERM
   xset dpms force off
 ) &
-# Draws image on window and darkens image
-eval 'exec xloadimage -fullscreen -brighten 70 -windowid $XSCREENSAVER_WINDOW /home/tleilaxu/.config/screensaver/screensaver.png'
+# Show image on the window
+eval 'exec xloadimage -brighten 70 -fullscreen -windowid $XSCREENSAVER_WINDOW /home/tleilaxu/.config/screensaver/screensaver.png'
