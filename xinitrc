@@ -1,5 +1,5 @@
 #!/bin/sh
-xsecurelock
+xsecurelock auth_pam_x11 saver_blank2
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap

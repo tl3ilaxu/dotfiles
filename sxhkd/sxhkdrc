@@ -80,7 +80,8 @@ super + p
 	yeganesh -x -- -fn '-*-terminus-*-*-*-*-20-*-*-*-*-*-*-*' -nb '#121212' -nf '#555556' -sb '#3f0f8d' -p 'Execute:' -sf '#b2aba5'| $SHELL
 
 super + l
-    xsecurelock
+    scrot -e 'mv $f ~/.config/screensaver/screensaver.png';\
+    xsecurelock saver_darken
 
 XF86MonBrightnessUp
     xbacklight -inc 5
