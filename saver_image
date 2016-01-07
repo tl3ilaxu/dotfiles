@@ -8,4 +8,4 @@
   xset dpms force off
 ) &
 # Show image on the window
-eval 'exec xloadimage -fullscreen -windowid $XSCREENSAVER_WINDOW /home/tleilaxu/.config/screensaver/screensaver.png'
+eval 'exec xloadimage -fullscreen -border black -windowid $XSCREENSAVER_WINDOW ${HOME}/.config/screensaver/screensaver.png'

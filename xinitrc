@@ -1,5 +1,5 @@
 #!/bin/sh
-xsecurelock auth_pam_x11 saver_blank2
+xsecurelock saver_darken
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -27,7 +27,7 @@ fi
 dunst -config /home/tleilaxu/.dunstrc &
 xsetroot -cursor_name left_ptr &
 feh --bg-scale $HOME/Pictures/currentWallpaper.jpg
-xautolock -time 3 -locker xsecurelock | logger &
+xautolock -time 3 -locker "xsecurelock saver_darken" | logger &
 setxkbmap -model pc104 -layout us,be,us -variant ,,dvorak -option grp:alt_shift_toggle caps:none compose:caps
 
 sxhkd &
