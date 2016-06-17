@@ -2,7 +2,11 @@
 ! General options.
 ! ----------------
 
-! Slightly largr terminal for line numbers in vim.
+ssh-askpass*background: #2f343f
+ssh-askpass*foreground: #ffffff
+ssh-askpass*shadowThickness: 0
+
+! Slightly larger terminal for line numbers in vim.
 *geometry: 84x25
 
 ! Every shell is a login shell by default (for inclusion of all necessary
@@ -20,16 +24,13 @@
 ! -----
 
 ! Use a nice truetype font and size by default... 
-!xterm*faceName: Source Code Pro for Powerline
-!xterm*faceSize: 10
-
+XTerm*faceName: Source Code Pro for Powerline
+XTerm*faceSize: 12
+!
 ! double-click to select whole URLs :D
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-xterm*foreground: rgb:f8/f8/f8
-xterm*background: rgb:00/00/00
-XTerm*faceName: Bitstream Vera Serif Mono
-xterm*faceSize: 12
+XTerm*locale: true
 
 ! Using alt as a meta key.
 XTerm*metaSendsEscape: true
@@ -39,3 +40,48 @@ xterm*eightBitInput: false
 xterm*boldMode: false
 xterm*colorBDMode: true
 xterm*colorBD: rgb:fc/fc/fc
+
+! URxvt
+! _____
+
+
+URxvt*font: xft:DejaVuSansMono
+URxvt.scrollBar: false
+
+*.foreground: #f0f0f0
+*.background: #394952
+*.cursorColor: #f0f0f0
+
+black
+! Second black is grey
+*.color0:       #394952
+*.color8:       #70838c
+
+! red
+*.color1:       #99736e
+*.color9:       #99736e
+
+! green
+*.color2:       #78a090
+*.color10:      #78a090
+
+! yellow
+*.color3:       #bfb7a1
+*.color11:      #bfb7a1
+
+! blue
+*.color4:       #7c9fa6
+*.color12:      #7c9fa6
+
+! magenta
+*.color5:       #BF9C86
+*.color13:      #BF9C86
+
+! cyan
+*.color6:       #99BFBA
+*.color14:      #99BFBA
+
+! white
+*.color7:       #f0f0f0
+*.color15:      #f0f0f0
+

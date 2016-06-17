@@ -1,16 +1,16 @@
 Config { 
 
     -- appearance
-        font =         "xft:Bitstream Vera Sans Mono:size=12:antialias=true"
-        , bgColor =      "#121212"
+        font =         "xft:Bitstream Vera Sans Mono:size=11:antialias=true"
+        , bgColor =      "#2f343f"
         , fgColor =      "#ffffff"
-        , position =     Top
-        , borderColor =  "#646464"
+        , position =     TopSize C 100 28
+        , textOffset = 20
 
         -- layout
-        , sepChar =  "%"   -- delineator between plugin names and straight text
+        , sepChar =  "@"   -- delineator between plugin names and straight text
         , alignSep = "}{"  -- separator between left-right alignment
-        , template = " <fc=#b3b3b3>%wifi%</fc>}%title%{ <fc=#3333ff>%batt%</fc> <fc=#b3b3b3>%date%</fc> "
+        , template = " @wifi@}{ @batt@    @date@ "
 
         -- general behavior
         , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -22,7 +22,7 @@ Config {
 
         , commands = 
         -- memory usage monitor
-        [ Run DateZone      "%d-%m-%Y %a %H:%M:%S" "be_BE.UTF-8" "Europe/Brussels" "date" 10
+        [ Run DateZone      "%d-%m-%y %a %H:%M" "be_BE.UTF-8" "Europe/Brussels" "date" 10
         , Run Com ".config/xmobar/scripts/wifi" [] "wifi" 10
         , Run Com "xtitle" ["-t 60"] "title" 10
         , Run Com ".config/xmobar/scripts/batt" [] "batt" 10

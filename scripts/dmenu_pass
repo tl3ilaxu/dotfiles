@@ -1,0 +1,2 @@
+#! /bin/bash
+/usr/bin/dmenu_run -mask

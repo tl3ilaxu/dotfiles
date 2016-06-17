@@ -5,13 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'shougo/vimproc.vim'
+Bundle "Shougo/deoplete.nvim"
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'lokaltog/vim-easymotion'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'bling/vim-airline'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
@@ -19,7 +19,6 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'shougo/unite.vim'
 Bundle 'raimondi/delimitMate'
-
 filetype plugin indent on
 
 " Leader
@@ -34,7 +33,7 @@ else
 end
 
 " Plugin settings
-let g:ycm_key_list_select_completion = ['<Down>']
+" let g:ycm_key_list_select_completion = ['<Down>']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -74,10 +73,13 @@ set backup                       " enable backups
 set backupskip=/tmp/*,/private/tmp/*"
 
 " Language specific indenting
-autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
-autocmd FileType coffee setlocal shiftwidth=2 softtabstop=2
 autocmd FileType haml setlocal shiftwidth=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2
+autocmd FileType scss setlocal shiftwidth=2 softtabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 softtabstop=2
+autocmd FileType js setlocal shiftwidth=1 softtabstop=1
 autocmd FileType hs setlocal shiftwidth=8 softtabstop=8 tabstop=8
 
 " Keep selection after indenting
@@ -101,6 +103,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 
 " autoformat
 nnoremap <leader>f :Autoformat<CR>
+autocmd FileType javascript noremap <buffer>  <leader>f :call JsBeautify()<cr>
 
 " unite
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=files -start-insert file<cr>
@@ -108,9 +111,7 @@ nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=files -start-insert file<c
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-
 " Colorscheme
 set t_Co=256
 syntax enable
-colorscheme lucius
-LuciusBlack
+colorscheme seoul256

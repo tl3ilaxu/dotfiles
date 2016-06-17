@@ -1,87 +1,53 @@
 #
 # bspwm hotkeys
 #
-super + alt + Escape
-	pkill -x panel; bspc quit
-
 super + shift + c
-	bspc window -c
+	bspc node -c
 
 super + t
 	bspc desktop -l next
 
-super + b
-	bspc desktop -B
-
-super + {grave,Tab}
-	bspc {window,desktop} -f last
-
-super + {o,i}
-	bspc control --record-history off; \
-	bspc window {older,newer} -f; \
-	bspc control --record-history on
-
-super + y
-	bspc window -w last.manual
-
-super + m
-	bspc window -s biggest
-
 super + k
-	bspc window -f {next,prev}
+	bspc node -f {next,prev}
 
-super + {comma,period}
-	bspc desktop -C {backward,forward}
-
-super + bracket{left,right}
-	bspc desktop -f {prev,next}
-
-super + ctrl + {h,j,k,l}
-	bspc window -p {left,down,up,right}
-
-super + ctrl + {_,shift + }space
-	bspc {window -p cancel,desktop -c}
-
-super + alt + {h,j,k,l}
-	bspc window -e {left -10,down +10,up -10,right +10}
-
-super + alt + shift + {h,j,k,l}
-	bspc window -e {right -10,up +10,down -10,left +10}
-
-super + ctrl + {1-9}
-	bspc window -r 0.{1-9}
-
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} ^{1-9,10}
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 ~button1
 	bspc pointer -g focus
 
-super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
+super + u
+    urxvt -cd $(cat $HOME/.last_dir)
 
-super + !button{1-3}
-	bspc pointer -t %i %i
-
-super + @button{1-3}
-	bspc pointer -u
-
-#
-# wm independent hotkeys
-#
-#
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+##
+## wm independent hotkeys
+##
+##
 super + f
-    bspc window -t "floating"
+    bspc node -t {"floating", "tiled"}
 
 super + shift +Return
-	xterm
-
+	urxvt
+#
 super + p
-	yeganesh -x -- -fn '-*-terminus-*-*-*-*-20-*-*-*-*-*-*-*' -nb '#121212' -nf '#555556' -sb '#3f0f8d' -p 'Execute:' -sf '#b2aba5'| $SHELL
+	yeganesh -x -- -q -b -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 1000 -x 183 -y 20 -o 1 -h 25| $SHELL
+
+super + c
+    ls /etc/netctl | dmenu -f -i -l 10 -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo -A netctl switch-to
+
+super + s
+    sudo -A sh -c "echo -e '$(/home/tleilaxu/.dotfiles/scripts/connect)' | dmenu -f -i -l 10 -fn 'Monospace-11:normal' -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo netctl switch-to"
+
+super + d
+    sudo -A netctl stop-all
 
 super + l
     scrot -e 'mv $f ~/.config/screensaver/screensaver.png';\
-    xsecurelock saver_darken
+    xsecurelock saver_mpv
 
 XF86MonBrightnessUp
     xbacklight -inc 5
@@ -90,53 +56,23 @@ XF86MonBrightnessDown
     xbacklight -dec 5
 
 XF86AudioRaiseVolume
-    pulseaudio-ctl up; notify-send -i none -t 50 $(pulseaudio-ctl full-status | cut -c1-3)
+    pulseaudio-ctl up; notify-send -i none -t 50 $(pulseaudio-ctl current)
 
 XF86AudioLowerVolume
-    pulseaudio-ctl down; notify-send -i none -t 50 $(pulseaudio-ctl full-status | cut -c1-3)
+    pulseaudio-ctl down; notify-send -i none -t 50 $(pulseaudio-ctl current)
 
 XF86AudioMute
-    pulseaudio-ctl mute; notify-send -i none -t 50 $(pulseaudio-ctl full-status | cut -c4-6 | sed 's/yes/Muted/' | sed 's/no/UnMuted/')
+    pulseaudio-ctl mute; notify-send -i none -t 50 $(pulseaudio-ctl full-status | cut -d' ' -f2 | sed 's/yes/Muted/' | sed 's/no/UnMuted/')
+
 Print
     scrot -e 'mv $f ~/Pictures/screenshots'
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd; pkill xmobar; xmobar &
-
-# dirty ass scratchpads
-super + w
-    id=$(bspc query -W -w "focused");\
-    if [ -n "$id" ];then \
-        xprop -id $id -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
-        bspc window -t "floating";\
-        xdotool windowunmap $id;\
-    fi
-
-super + shift + w
-    i=$(bspc query -W -w "focused.floating");\
-    if [ -n "$i" ];then \
-        xprop -id $i -f _SCRATCH 32ii -set _SCRATCH $(date +%s,%N);\
-        xdotool windowunmap $i;\
-    else;\
-        i=`for w in $(xwininfo -root -children | grep -e "^\s*0x[0-9a-f]\+" -o);do \
-            t=$(xprop -id $w _SCRATCH | grep ' = \(.*\)');\
-            if [ -n "$t" ];then \
-                echo $t $w;\
-            fi;\
-           done|sort -n|head -n1|cut -d" " -f 5`;\
-        if [ -n "$i" ];then \
-            xprop -id $i -remove _SCRATCH;\
-            bspc rule -a \* state=floating center=true --one-shot;\
-            xdotool windowmap $i;\
-            bspc window -f "$i";\
-        fi;\
-    fi
-
-
-super + shift + h
-    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
-super + shift + j
-    mplayer /home/tleilaxu/samples/and-his-name-is-john-cena-1.mp3
-super + shift + k
-    mplayer /home/tleilaxu/samples/oh-baby-a-triple.mp3
+    pkill -USR1 -x sxhkd; pkill xmobar; xmobar &
+#super + shift + h
+#    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
+#super + shift + j
+#    mplayer /home/tleilaxu/samples/and-his-name-is-john-cena-1.mp3
+#super + shift + k
+#    mplayer /home/tleilaxu/samples/oh-baby-a-triple.mp3

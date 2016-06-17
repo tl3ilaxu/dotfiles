@@ -1,12 +1,23 @@
 #!/bin/sh
 #↑↓
 bar="$(acpi | sed "s/.*\( \(.*\)%\).*/\2/g" | tr -d "\n")"
+blue="<fc=#4c4ce6>"
+red="<fc=#ec1313>"
+orange="<fc=#dfdf20>"
+color=$orange
+
+if [ $bar -le 20 ]; then
+    color=$red
+fi
+
+if [ $bar -ge 60 ]; then
+    color=$blue
+fi
+
 if acpi | grep -q "Charging"; then
-    echo -n $bar
-    echo -n "↑"
+    echo -n "$color$bar% ↑</fc>"
 elif acpi | grep -q "Discharging"; then
-    echo -n $bar
-    echo -n "↓"
+    echo -n "$color$bar% ↓</fc>"
 fi
 
 exit 0

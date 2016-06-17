@@ -1,0 +1,2 @@
+#! /bin/bash
+sudo iw dev wlp3s0 scan | awk '/SSID/ {print $2}'
