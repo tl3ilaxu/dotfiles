@@ -40,7 +40,7 @@ super + c
     ls /etc/netctl | dmenu -f -i -l 10 -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo -A netctl switch-to
 
 super + s
-    sudo -A sh -c "echo -e '$(/home/tleilaxu/.dotfiles/scripts/connect)' | dmenu -f -i -l 10 -fn 'Monospace-11:normal' -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo netctl switch-to"
+    sudo -A bash -c "/home/tleilaxu/.dotfiles/scripts/connect | dmenu -f -i -l 12 -fn 'Monospace-11:normal' -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs netctl switch-to"
 
 super + d
     sudo -A netctl stop-all

@@ -1,10 +1,11 @@
 #!/bin/bash
+# Should be run as su
 interface_name="wlp3s0"
 
 if [ -z "$(ip link show dev $interface_name up)"  ]; then
-    sudo ip link set $interface_name up
+    ip link set $interface_name up
 fi
 
-comm -12 <(sudo iw dev $interface_name scan | awk '/SSID/ {print $2}' | sort) <(netctl list | sed "s/^[ |*]*//" | sort)
+comm -12 <(iw dev $interface_name scan | awk '/SSID/ {print $2}' | sort) <(netctl list | sed "s/^[ |*]*//" | sort)
 
-sudo ip link set $interface_name down
+ip link set $interface_name down
