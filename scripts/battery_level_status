@@ -1,0 +1,3 @@
+#!/bin/bash
+batt="$(acpi | sed "s/.*\( \(.*\)%\).*/\2/g" | tr -d "\n")"
+echo -n "<span size='x-large'>🔋 </span>$batt"

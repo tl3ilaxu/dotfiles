@@ -30,6 +30,7 @@ xsetroot -cursor_name left_ptr &
 feh --bg-scale -Z $HOME/Pictures/currentWallpaper.jpg
 xautolock -time 3 -locker "xsecurelock saver_mpv" | logger &
 setxkbmap -model pc104 -layout us,be,us -variant ,,dvorak -option grp:alt_shift_toggle caps:none compose:caps
+pulseaudio --start
 #Fix java
 export _JAVA_AWT_WM_NONREPARENTING=1
 IRONIC_WM_NAME="LG3D"
@@ -46,6 +47,8 @@ else
     xprop -root -f _NET_WM_NAME 8s -set _NET_WM_NAME "$IRONIC_WM_NAME"
 fi
 
-compton -b
+compton --config /home/tleilaxu/compton.conf -b
+/home/tleilaxu/.dotfiles/scripts/battery_level_checker &
+
 sxhkd &
 exec bspwm

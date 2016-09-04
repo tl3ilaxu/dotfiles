@@ -37,11 +37,23 @@ super + p
 	yeganesh -x -- -q -b -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 1000 -x 183 -y 20 -o 1 -h 25| $SHELL
 
 super + c
-    ls /etc/netctl | dmenu -f -i -l 10 -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo -A netctl switch-to
+    ls /etc/netctl | dmenu -f -i -l 10 -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo -A netctl switch-to; notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
 
 super + s
-    sudo -A bash -c "/home/tleilaxu/.dotfiles/scripts/connect | dmenu -f -i -l 12 -fn 'Monospace-11:normal' -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs netctl switch-to"
+    sudo -A bash -c "/home/tleilaxu/.dotfiles/scripts/connect \
+    | dmenu -f -i -l 12 -fn 'Monospace-11:normal' -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs netctl switch-to"; notify-send $(~/.dotfiles/xmobar/scripts/wifi)
 
+super + n
+    notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
+
+
+alt + s
+    ~/.dotfiles/scripts/status
+
+super + e
+    xdotool search --onlyvisible --classname scratchpad windowunmap \
+        || xdotool search --classname scratchpad windowmap \
+        || urxvt -name scratchpad -g 122x25-10+0 &
 super + d
     sudo -A netctl stop-all
 
@@ -56,20 +68,23 @@ XF86MonBrightnessDown
     xbacklight -dec 5
 
 XF86AudioRaiseVolume
-    pulseaudio-ctl up; notify-send -i none -t 50 $(pulseaudio-ctl current)
+    pulseaudio-ctl up; \
+    notify-send "$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
 
 XF86AudioLowerVolume
-    pulseaudio-ctl down; notify-send -i none -t 50 $(pulseaudio-ctl current)
+    pulseaudio-ctl down; \
+    notify-send "$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
 
 XF86AudioMute
-    pulseaudio-ctl mute; notify-send -i none -t 50 $(pulseaudio-ctl full-status | cut -d' ' -f2 | sed 's/yes/Muted/' | sed 's/no/UnMuted/')
+    pulseaudio-ctl mute; \
+    notify-send "$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
 
 Print
     scrot -e 'mv $f ~/Pictures/screenshots'
 
 # make sxhkd reload its configuration files:
 super + Escape
-    pkill -USR1 -x sxhkd; pkill xmobar; xmobar &
+    pkill -USR1 -x sxhkd; #pkill xmobar; xmobar &
 #super + shift + h
 #    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
 #super + shift + j

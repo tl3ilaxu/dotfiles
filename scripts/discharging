@@ -1,0 +1,7 @@
+#!/bin/bash
+if acpi | grep -q "Charging"; then
+    status="🔌"
+elif acpi | grep -q "Discharging"; then
+    status="🔌 ×"
+fi
+/home/tleilaxu/.dotfiles/scripts/systemwide_notify "$status"

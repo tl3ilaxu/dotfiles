@@ -1,0 +1,2 @@
+#!/bin/bash
+notify-send "🔊 $(pulseaudio-ctl current | sed 's/%//')"

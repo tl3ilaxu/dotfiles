@@ -1,24 +1,26 @@
 [global]
-    font = "Monospace 11"
+    font = "Dejavu 12"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
+    line_height = 0
     sort = yes
     shrink = no
     indicate_hidden = true
     idle_threshold = 120
-    geometry = "300x5-20+30"
+    geometry = "0x0-30+10"
     alignment = center
     show_age_threshold = 60
     sticky_history = yes
     follow = keyboard
-    word_wrap = yes
+    word_wrap = no
     separator_height = 2
-    transparency = 25
+    transparency = 0
     padding = 8
-    horizontal_padding = 5
+    horizontal_padding = 16
     separator_color = auto
     startup_notification = false
-    icon_position = left
+    icon_position = off
+    ignore_newline = yes
     dmenu = /usr/bin/yeganesh -p dunst:
     browser = /usr/bin/qutebrowser
 
@@ -48,11 +50,11 @@
     timeout = 5
 
 [urgency_normal]
-    foreground = "#15191f"
-    background = "#FFFFFF"
-    timeout = 8
+    foreground = "#71c3af"
+    background = "#1d2a30"
+    timeout = 10
 
 [urgency_critical]
     background = "#900000"
     foreground = "#FFFFFF"
-    timeout = 10
+    timeout = 0

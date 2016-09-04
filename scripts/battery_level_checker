@@ -1,0 +1,16 @@
+#!/bin/bash
+lastbatt="100"
+batt="$(acpi | sed "s/.*\( \(.*\)%\).*/\2/g" | tr -d "\n")"
+while true; do
+    batt="$(acpi | sed "s/.*\( \(.*\)%\).*/\2/g" | tr -d "\n")"
+    echo $batt
+    if [[ $(($lastbatt-$batt)) > "10" ]]; then
+        lastbatt=$batt
+        urgency="normal"
+        if [[ $batt < 30 ]]; then
+            urgency="critical"
+        fi
+        notify-send -u $urgency "$(/home/tleilaxu/.dotfiles/scripts/battery_level_status)"
+    fi
+    sleep 2m
+done

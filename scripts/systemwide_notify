@@ -1,0 +1,8 @@
+#!/bin/bash
+export DISPLAY=:0
+for pid in $(pgrep 'bspwm'); do
+        eval $(grep -z ^USER /proc/$pid/environ)
+        eval export $(grep -z ^DISPLAY /proc/$pid/environ)
+        eval export $(grep -z ^DBUS_SESSION_BUS_ADDRESS /proc/$pid/environ)
+        su $USER -c "notify-send ""$1"""
+done
