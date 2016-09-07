@@ -46,6 +46,8 @@ super + s
 super + n
     notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
 
+super + w
+    notify-send "$(~/.dotfiles/scripts/weather)"
 
 alt + s
     ~/.dotfiles/scripts/status
@@ -84,7 +86,7 @@ Print
 
 # make sxhkd reload its configuration files:
 super + Escape
-    pkill -USR1 -x sxhkd; #pkill xmobar; xmobar &
+    pkill -USR1 -x sxhkd;pkill dunst; sxhkd &; dunst -config /home/tleilaxu/.dunstrc &
 #super + shift + h
 #    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
 #super + shift + j
