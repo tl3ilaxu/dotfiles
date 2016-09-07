@@ -8,8 +8,8 @@
     indicate_hidden = true
     idle_threshold = 120
     geometry = "0x0-30+10"
-    alignment = center
-    show_age_threshold = 60
+    alignment = left
+    show_age_threshold = -1
     sticky_history = yes
     follow = keyboard
     word_wrap = no

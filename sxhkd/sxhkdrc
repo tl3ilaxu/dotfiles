@@ -47,7 +47,7 @@ super + n
     notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
 
 super + w
-    notify-send "$(~/.dotfiles/scripts/weather)"
+    notify-send "<span face='Monospace'>$(~/.dotfiles/scripts/weather)</span>"
 
 alt + s
     ~/.dotfiles/scripts/status
