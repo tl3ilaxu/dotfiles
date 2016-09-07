@@ -1,9 +1,9 @@
 #!/bin/bash
 
-vol_icon="🔊"
+vol_icon="$(echo -e '\uf028')"
 muted=$(pulseaudio-ctl full-status | awk '{print $2}')
 if [ $muted == "yes" ]; then
-    vol_icon="🔇"
+    vol_icon="$(echo -e '\uf026')"
 fi
 vol=$(pulseaudio-ctl current | sed 's/%//')
-echo -n "<span size='x-large'>$vol_icon</span> $vol"
+echo -n "<span size='large'>$vol_icon</span>  $vol"

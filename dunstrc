@@ -1,7 +1,7 @@
 [global]
-    font = "Dejavu 12"
+    font = "Cantarell, Font Awesome 12"
     allow_markup = yes
-    format = "<b>%s %p</b>\n%b"
+    format = "%s"
     line_height = 0
     sort = yes
     shrink = no
@@ -20,7 +20,7 @@
     separator_color = auto
     startup_notification = false
     icon_position = off
-    ignore_newline = yes
+    #ignore_newline = yes
     dmenu = /usr/bin/yeganesh -p dunst:
     browser = /usr/bin/qutebrowser
 
