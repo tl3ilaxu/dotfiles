@@ -2,6 +2,13 @@
 ! General options.
 ! ----------------
 
+
+dmenu.font: Monospace-11:normal
+dmenu.foreground: #ffffff
+dmenu.backgound: #2f343f
+dmenu.selforground: #4c4ce6
+dmenu.selbackgound: #2f343f
+
 ssh-askpass*background: #2f343f
 ssh-askpass*foreground: #ffffff
 ssh-askpass*shadowThickness: 0
@@ -48,9 +55,6 @@ xterm*colorBD: rgb:fc/fc/fc
 URxvt*font: xft:DejaVuSansMono
 URxvt.scrollBar: false
 
-*.foreground: #f0f0f0
-*.background: #394952
-*.cursorColor: #f0f0f0
 
 black
 ! Second black is grey
@@ -85,3 +89,6 @@ black
 *.color7:       #f0f0f0
 *.color15:      #f0f0f0
 
+*.foreground: #f0f0f0
+*.background: #394952
+*.cursorColor: #f0f0f0

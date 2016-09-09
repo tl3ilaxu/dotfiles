@@ -1,0 +1,4 @@
+#!/bin/bash
+weather="$@"
+length=$(wc -L <(echo "$weather") | cut -d" " -f1)
+echo "$weather" | awk '{printf "%-"'"$length"'"s\n", $0}'

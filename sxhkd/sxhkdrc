@@ -34,20 +34,24 @@ super + shift +Return
 	urxvt
 #
 super + p
-	yeganesh -x -- -q -b -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 1000 -x 183 -y 20 -o 1 -h 25| $SHELL
+	yeganesh -x -- -q -b -w 1000 -x 183 -y 20 -o 1 -h 25 |\
+    $SHELL
 
 super + c
-    ls /etc/netctl | dmenu -f -i -l 10 -fn "Monospace-11:normal" -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs sudo -A netctl switch-to; notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
+    sudo -A netctl switch-to "$(ls /etc/netctl | \
+    dmenu -f -i -l 10 -w 350 -x 20 -y 40 -o 1 -h 25)";\
+    notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
 
 super + s
     sudo -A bash -c "/home/tleilaxu/.dotfiles/scripts/connect \
-    | dmenu -f -i -l 12 -fn 'Monospace-11:normal' -nb '#2f343f' -nf '#ffffff' -sb '#2f343f' -sf '#4c4ce6' -w 350 -x 20 -y 40 -o 1 -h 25 | xargs netctl switch-to"; notify-send $(~/.dotfiles/xmobar/scripts/wifi)
+    | dmenu -f -i -l 12 -w 350 -x 20 -y 40 -o 1 -h 25 | xargs netctl switch-to";\
+    notify-send $(~/.dotfiles/xmobar/scripts/wifi)
 
 super + n
-    notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
+    notify-send "$(~/.dotfiles//scripts/wifi)"
 
 super + w
-    notify-send "<span face='Monospace'>$(~/.dotfiles/scripts/weather)</span>"
+    notify-send "<span face='Monospace'>$(~/.dotfiles/scripts/monospace_square "$(~/.dotfiles/scripts/weather)")</span>"
 
 alt + s
     ~/.dotfiles/scripts/status
@@ -56,6 +60,7 @@ super + e
     xdotool search --onlyvisible --classname scratchpad windowunmap \
         || xdotool search --classname scratchpad windowmap \
         || urxvt -name scratchpad -g 122x25-10+0 &
+
 super + d
     sudo -A netctl stop-all
 
@@ -87,8 +92,8 @@ Print
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd;pkill dunst; sxhkd &; dunst -config /home/tleilaxu/.dunstrc &
-#super + shift + h
-#    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
+super + shift + h
+    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
 #super + shift + j
 #    mplayer /home/tleilaxu/samples/and-his-name-is-john-cena-1.mp3
 #super + shift + k
