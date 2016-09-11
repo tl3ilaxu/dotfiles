@@ -6,4 +6,4 @@ elif acpi | grep -q "Discharging"; then
 fi
 batt=$(/home/tleilaxu/.dotfiles/scripts/battery_level_status)
 vol="$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
-notify-send "<span size='large'>$status</span> $batt  $vol  <span size='large'>$(echo -e '\uf073')  </span>$(date +%d.%m) <span size='large'> $(echo -e '\uf017')  </span>$(date +%R)"
+notify-send "<span size='large'>$status</span>  $batt  $vol  <span size='large'>$(echo -e '\uf073')  </span>$(date +%d.%m) <span size='large'> $(echo -e '\uf017')  </span>$(date +%R)"
