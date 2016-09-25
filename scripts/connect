@@ -1,6 +1,6 @@
 #!/bin/bash
 # Should be run as su
-interface_name="wlp3s0"
+interface_name="wlp2s0"
 
 if [ -z "$(ip link show dev $interface_name up)"  ]; then
     ip link set $interface_name up

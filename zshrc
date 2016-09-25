@@ -18,6 +18,7 @@ export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 #PATH=$PATH:~/.cabal/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/bin" # Add RVM to PATH for scripting
 stty -ixon #fixes ctrl-s
 autoload colors
 colors
@@ -39,5 +40,3 @@ function cd {
     builtin cd "$@"
     echo ~+ > $HOME/.last_dir
 }
-source ~/.profile
-#alias convert="libreoffice --headless --invisible --convert-to pdf 1-ER.pptxbreoffice --headless --invisible --convert-to pdf"

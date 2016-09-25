@@ -1,11 +1,15 @@
 #
 # bspwm hotkeys
 #
+
 super + shift + c
 	bspc node -c
 
 super + t
 	bspc desktop -l next
+
+super + {comma,period}
+    bspc desktop -C {backward, forward}
 
 super + k
 	bspc node -f {next,prev}
@@ -23,7 +27,17 @@ super + u
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-##
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+super + ctrl + {h,j,k,l}
+    bspc node -p {west,south,north,east}
+
+##w
 ## wm independent hotkeys
 ##
 ##
@@ -34,32 +48,33 @@ super + shift +Return
 	urxvt
 #
 super + p
-	yeganesh -x -- -q -b -w 1000 -x 183 -y 20 -o 1 -h 25 |\
+	yeganesh -x -- -q -b -w 1800 -x 55 -y 20 -o 1 -h 25 |\
     $SHELL
 
 super + c
-    sudo -A netctl switch-to "$(ls /etc/netctl | \
+    sudo -A netctl switch-to "$(ls -p /etc/netctl | \
+    grep -v / | \
     dmenu -f -i -l 10 -w 350 -x 20 -y 40 -o 1 -h 25)";\
-    notify-send "$(~/.dotfiles/xmobar/scripts/wifi)"
+    notify-send "<span face='Monospace'>$(~/.dotfiles/xmobar/scripts/wifi)</span>"
 
 super + s
     sudo -A bash -c "/home/tleilaxu/.dotfiles/scripts/connect \
     | dmenu -f -i -l 12 -w 350 -x 20 -y 40 -o 1 -h 25 | xargs netctl switch-to";\
-    notify-send $(~/.dotfiles/xmobar/scripts/wifi)
+    notify_replace $(~/.dotfiles/xmobar/scripts/wifi)
 
 super + n
-    notify-send "$(~/.dotfiles//scripts/wifi)"
+    notify-send "<span face='Monospace'>$(~/.dotfiles/scripts/wifi)</span>"
 
 super + w
-    notify-send "<span face='Monospace'>$(~/.dotfiles/scripts/monospace_square "$(~/.dotfiles/scripts/weather)")</span>"
+    notify-send "<span face='Monospace'>$(monospace_square "$(weather)")</span>"
 
 alt + s
-    ~/.dotfiles/scripts/status
+    notify-send "$(status)"
 
 super + e
     xdotool search --onlyvisible --classname scratchpad windowunmap \
         || xdotool search --classname scratchpad windowmap \
-        || urxvt -name scratchpad -g 122x25-10+0 &
+        || urxvt -name scratchpad -g 170x25-20+0 &
 
 super + d
     sudo -A netctl stop-all
@@ -69,22 +84,24 @@ super + l
     xsecurelock saver_mpv
 
 XF86MonBrightnessUp
-    xbacklight -inc 5
+    xbacklight -inc 5; \
+    notify_replace "<span face='Monospace'>\uf185</span>\n\n$(progress_bar -fv $(xbacklight))"
 
 XF86MonBrightnessDown
-    xbacklight -dec 5
+    xbacklight -dec 5; \
+    notify_replace "<span face='Monospace'>\uf185</span>\n\n$(progress_bar -fv $(xbacklight))"
 
 XF86AudioRaiseVolume
     pulseaudio-ctl up; \
-    notify-send "$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
+    notify_replace "$(volume_status)"
 
 XF86AudioLowerVolume
     pulseaudio-ctl down; \
-    notify-send "$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
+    notify_replace "$(volume_status)"
 
 XF86AudioMute
     pulseaudio-ctl mute; \
-    notify-send "$(/home/tleilaxu/.dotfiles/scripts/volume_status)"
+    notify_replace "$(volume_status)"
 
 Print
     scrot -e 'mv $f ~/Pictures/screenshots'
@@ -92,9 +109,3 @@ Print
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd;pkill dunst; sxhkd &; dunst -config /home/tleilaxu/.dunstrc &
-super + shift + h
-    mplayer /home/tleilaxu/samples/instantrapairhorn.mp3
-#super + shift + j
-#    mplayer /home/tleilaxu/samples/and-his-name-is-john-cena-1.mp3
-#super + shift + k
-#    mplayer /home/tleilaxu/samples/oh-baby-a-triple.mp3

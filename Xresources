@@ -2,12 +2,12 @@
 ! General options.
 ! ----------------
 
+*backgound: #2f343f
+*foreground: #ffffff
 
-dmenu.font: Monospace-11:normal
-dmenu.foreground: #ffffff
-dmenu.backgound: #2f343f
-dmenu.selforground: #4c4ce6
-dmenu.selbackgound: #2f343f
+dmenu*font: Monospace-11:normal
+dmenu*selforground: #4c4ce6
+dmenu*selbackgound: #2f343f
 
 ssh-askpass*background: #2f343f
 ssh-askpass*foreground: #ffffff
@@ -27,30 +27,12 @@ ssh-askpass*shadowThickness: 0
 ! stop output to terminal from jumping down to bottom of scroll again
 *scrollTtyOutput: false
 
-! xterm
-! -----
-
-! Use a nice truetype font and size by default... 
-XTerm*faceName: Source Code Pro for Powerline
-XTerm*faceSize: 12
-!
-! double-click to select whole URLs :D
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-
-XTerm*locale: true
-
-! Using alt as a meta key.
-XTerm*metaSendsEscape: true
-
-xterm*saveLines: 2000
-xterm*eightBitInput: false
-xterm*boldMode: false
-xterm*colorBDMode: true
-xterm*colorBD: rgb:fc/fc/fc
-
 ! URxvt
 ! _____
 
+URxvt.foreground: #f0f0f0
+URxvt.background: #394952
+*.cursorColor: #f0f0f0
 
 URxvt*font: xft:DejaVuSansMono
 URxvt.scrollBar: false
@@ -89,6 +71,3 @@ black
 *.color7:       #f0f0f0
 *.color15:      #f0f0f0
 
-*.foreground: #f0f0f0
-*.background: #394952
-*.cursorColor: #f0f0f0

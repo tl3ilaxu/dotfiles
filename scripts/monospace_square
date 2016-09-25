@@ -1,4 +1,16 @@
 #!/bin/bash
-weather="$@"
+align="-"
+weather=""
+for arg in "$@"; do
+    if [[ "$arg" =~ ^- ]]; then
+        #align right flag
+        if [ "$arg" == "-r" ]; then
+            align=""
+        fi
+    else
+        weather+=$weather$arg
+    fi
+done
 length=$(wc -L <(echo "$weather") | cut -d" " -f1)
-echo "$weather" | awk '{printf "%-"'"$length"'"s\n", $0}'
+format="%${align}${length}s\n"
+echo "$weather" | awk '{printf "'"$format"'", $0}'

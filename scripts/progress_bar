@@ -1,0 +1,72 @@
+#!/bin/sh
+# This script takes a percent value and outputs a progress bar
+
+# Play nice with otherscripts and reset used POSIX variables
+OPTIND=1
+
+# Flag variables with default values
+horizontal="-n"
+bar_length=10
+max_in_value=100
+flipped=false
+
+# Define symbols
+hor_full="$(echo -en '\u25ae')"
+ver_full="$(echo -en '\u25ac')"
+hor_empty="$(echo -en '\u25af')"
+ver_empty="$(echo -en '\u25ad')"
+bullet_point="$(echo -en '\uB7')"
+
+# Process flags
+while getopts "fvl:m:" opt; do
+    case $opt in
+        v)
+            horizontal="" 
+            ;;
+        l)
+            bar_length="$OPTARG"
+            ;;
+        m)
+            max_in_value="$OPTARG"
+            ;;
+        f)
+            flipped="true"
+            ;;
+        \?)
+            echo "Invalid argument $OPTARG" >&2
+    esac
+done
+
+# Shift all processed flags
+shift $((OPTIND-1))
+
+# Calculate number of bars to be coloured
+bars=$(bc -l <<< "$1 / $max_in_value * $bar_length")
+bars_to_make=${bars%.*}
+
+# Define left and right symbol (when the bar is horizontal)
+left="$hor_full"
+right="$bullet_point"
+
+# Process flags for symbols
+if [ -z "$horizontal" ]; then
+    left="$ver_full"
+    right="$ver_empty"
+fi
+
+if $flipped; then
+    bars_to_make=$(($bar_length - $bars_to_make))
+    old_left=$left;
+    left=$right
+    right=$old_left
+fi
+
+# Print bars
+for ((i=0; i<$bar_length; i++)); do
+    if [ $i -lt $bars_to_make ]; then
+        echo "$horizontal" "$left"
+    else
+        echo "$horizontal" "$right"
+    fi
+
+done

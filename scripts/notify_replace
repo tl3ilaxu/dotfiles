@@ -1,0 +1,2 @@
+gdbus call --session --dest org.freedesktop.Notifications --object-path /org/freedesktop/Notifications --method org.freedesktop.Notifications.CloseNotification $(cat /tmp/last_id) >> /dev/null
+~/.dotfiles/scripts/notify_log "$@"

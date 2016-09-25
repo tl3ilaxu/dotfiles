@@ -4,24 +4,29 @@ ip link 2>&1 | grep -q "enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP>" && {
     exit 0
 }
 
-essid="`iwconfig wlp3s0 | awk -F '"' '/ESSID/ {print $2}'`"
-stngth=`iwconfig wlp3s0 | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1`
+essid="`iwconfig wlp2s0 | awk -F '"' '/ESSID/ {print $2}'`"
+stngth=`iwconfig wlp2s0 | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1`
+if [ -z $stngth ];then
+    echo -n No Network
+    exit 0
+fi
 bars=`expr $stngth / 10`
 
-case $bars in
-        0)  bar='··········' ;;
-        1)  bar='❚·········' ;;
-        2)  bar='❚❚········' ;;
-        3)  bar='❚❚❚·······' ;;
-        4)  bar='❚❚❚❚······' ;;
-        5)  bar='❚❚❚❚❚·····' ;;
-        6)  bar='❚❚❚❚❚❚····' ;;
-        7)  bar='❚❚❚❚❚❚❚❚··' ;;
-        8)  bar='❚❚❚❚❚❚❚❚··' ;;
-        9)  bar='❚❚❚❚❚❚❚❚❚·' ;;
-        10) bar='❚❚❚❚❚❚❚❚❚❚' ;;
-        *)  bar='No Network' ;;
-esac
-echo -n "$essid  $bar"
+#case $bars in
+#        0)  bar='··········' ;;
+#        1)  bar='❚·········' ;;
+#        2)  bar='❚❚········' ;;
+#        3)  bar='❚❚❚·······' ;;
+#        4)  bar='❚❚❚❚······' ;;
+#        5)  bar='❚❚❚❚❚·····' ;;
+#        6)  bar='❚❚❚❚❚❚····' ;;
+#        7)  bar='❚❚❚❚❚❚❚❚··' ;;
+#        8)  bar='❚❚❚❚❚❚❚❚··' ;;
+#        9)  bar='❚❚❚❚❚❚❚❚❚·' ;;
+#        10) bar='❚❚❚❚❚❚❚❚❚❚' ;;
+#        *)  bar='No Network' ;;
+#esac
+echo -n "$essid "
+~/.dotfiles/scripts/progress_bar -m 10 $bars
 
 exit 0
