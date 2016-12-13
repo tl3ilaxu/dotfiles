@@ -5,7 +5,7 @@
 *backgound: #2f343f
 *foreground: #ffffff
 
-dmenu*font: Monospace-11:normal
+dmenu*font: Tamsyn-12:normal
 dmenu*selforground: #4c4ce6
 dmenu*selbackgound: #2f343f
 
@@ -20,12 +20,13 @@ ssh-askpass*shadowThickness: 0
 ! environment variables)
 *loginshell: true
 
-! right hand side scrollbar...
-!xterm*rightScrollBar: true
-*scrollBar: false
-
 ! stop output to terminal from jumping down to bottom of scroll again
 *scrollTtyOutput: false
+
+!Rofi
+
+rofi.terminal: urxvt
+rofi.font: tamsyn 12
 
 ! URxvt
 ! _____
@@ -34,11 +35,12 @@ URxvt.foreground: #f0f0f0
 URxvt.background: #394952
 *.cursorColor: #f0f0f0
 
-URxvt*font: xft:DejaVuSansMono
+!URxvt*font: xft:DejaVuSansMono
+URxvt*font: xft: tamsyn:size=16
+URxvt*scrollTtyOutput: true
 URxvt.scrollBar: false
 
 
-black
 ! Second black is grey
 *.color0:       #394952
 *.color8:       #70838c

@@ -1,5 +1,8 @@
 #!/bin/sh
 # This script takes a percent value and outputs a progress bar
+# It will look like this
+# Begin string = [, End string = ], Empty character =' ' , Full bar character = #
+# [#####     ]
 
 # Play nice with otherscripts and reset used POSIX variables
 OPTIND=1
@@ -9,6 +12,9 @@ horizontal="-n"
 bar_length=10
 max_in_value=100
 flipped=false
+end_char=""
+begin=char=""
+show_percent=false
 
 # Define symbols
 hor_full="$(echo -en '\u25ae')"
@@ -17,20 +23,58 @@ hor_empty="$(echo -en '\u25af')"
 ver_empty="$(echo -en '\u25ad')"
 bullet_point="$(echo -en '\uB7')"
 
+# Check input
+if [ "$#" -lt 1 ]; then
+    echo "Not enough arguments."
+    exit 1
+fi
+
 # Process flags
-while getopts "fvl:m:" opt; do
+while getopts "fvs:m:h:j:k:l:b:e:p" opt; do
     case $opt in
         v)
+            # Set progress bar to be vertical
             horizontal="" 
             ;;
-        l)
+        s)
+            # Set the maximum amount of characters for bar
             bar_length="$OPTARG"
             ;;
         m)
+            # Set the maximum value that will be input in script
             max_in_value="$OPTARG"
             ;;
         f)
+            # Flip the bar from left to right to right to left
             flipped="true"
+            ;;
+        h)
+            # Set horizontal full character
+            hor_full="$OPTARG"
+            ;;
+        j)
+            # Flip the bar from left to right to right to left
+            ver_full="$OPTARG"
+            ;;
+        k)
+            # Flip the bar from left to right to right to left
+            ver_empty="$OPTARG"
+            ;;
+        l)
+            # Flip the bar from left to right to right to left
+            bullet_point="$OPTARG"
+            ;;
+        e)
+            # End character
+            end_char="$OPTARG"
+            ;;
+        b)
+            # Beginning character
+            begin_char="$OPTARG"
+            ;;
+        p)
+            # Show percent
+            show_percent=true
             ;;
         \?)
             echo "Invalid argument $OPTARG" >&2
@@ -42,6 +86,7 @@ shift $((OPTIND-1))
 
 # Calculate number of bars to be coloured
 bars=$(bc -l <<< "$1 / $max_in_value * $bar_length")
+# Floor bars value
 bars_to_make=${bars%.*}
 
 # Define left and right symbol (when the bar is horizontal)
@@ -54,12 +99,16 @@ if [ -z "$horizontal" ]; then
     right="$ver_empty"
 fi
 
+# Flip bar
 if $flipped; then
     bars_to_make=$(($bar_length - $bars_to_make))
     old_left=$left;
     left=$right
     right=$old_left
 fi
+
+# Print begin string
+echo -n "$begin_char"
 
 # Print bars
 for ((i=0; i<$bar_length; i++)); do
@@ -68,5 +117,13 @@ for ((i=0; i<$bar_length; i++)); do
     else
         echo "$horizontal" "$right"
     fi
-
 done
+
+# Print end string
+echo -n "$end_char"
+
+# Show percent value at the end
+if $show_percent; then
+    percent=$(bc -l <<< "scale=2;$1 / $max_in_value * 100")
+    echo -n " ${percent}%"
+fi

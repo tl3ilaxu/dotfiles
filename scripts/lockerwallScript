@@ -1,0 +1,4 @@
+#!/bin/bash
+location="/home/tleilaxu/.config/screensaver/screensaver.png"
+convert $location -interpolate Nearest -filter point -resize 30% -resize 333.33% -fill White -stroke Black -font DejaVu-Sans-Mono -gravity Center -pointsize 42 -annotate 0 'Enter password to unlock.' $location
+i3lock -eui $location &

@@ -19,6 +19,7 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'shougo/unite.vim'
 Bundle 'raimondi/delimitMate'
+Bundle 'maksimr/vim-jsbeautify'
 filetype plugin indent on
 
 " Leader

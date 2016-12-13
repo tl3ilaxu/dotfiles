@@ -1,5 +1,5 @@
 [global]
-    font = "Cantarell, Font Awesome 12"
+    font = "Tamsyn, Font Awesome 12"
     allow_markup = yes
     format = "%s"
     line_height = 0
